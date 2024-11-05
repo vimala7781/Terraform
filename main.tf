@@ -6,12 +6,12 @@ terraform {
       version  = "3.43.0"
     }
   }
-  cloud { 
-    organization = "vimala7781-2001" 
-    workspaces { 
-      name = "TerraformCI" 
-    } 
-  } 
+  cloud {
+    organization = "vimala7781-2001"
+    workspaces {
+      name = "TerraformCI"
+    }
+  }
 }
 
 provider "azurerm" {
@@ -20,9 +20,9 @@ provider "azurerm" {
 }
 
 resource "random_string" "uniquestring" {
-  length           = 20
-  special          = false
-  upper            = false
+  length  = 20
+  special = false
+  upper   = false
 }
 
 resource "azurerm_resource_group" "rg" {
